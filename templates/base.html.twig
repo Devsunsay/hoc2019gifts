@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+{% extends 'root.html.twig' %}
+
+    {% block body %}
+        <header>
+            {% block pageTitle %}
+            {% endblock %}
+
+            {% block navbar %}
+                {% include 'nav.html.twig' %}
+            {% endblock %}
+        </header>
+
+        <main class="row">
+            <section class="col-12">
+                {% block section %} {# Le nom d'appel dans Twig est arbitraire !! #}
+                {% endblock %}
+            </section>
+        </main>
+
+    {% endblock %}
+

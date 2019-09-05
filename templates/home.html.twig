@@ -1,0 +1,29 @@
+{% extends 'root.html.twig' %}
+
+{% block body %}
+
+    <main class="row">
+        <section class="col-12">
+            <div class="row">
+                {% block section %} {# Le nom d'appel dans Twig est arbitraire !! #}
+                    <div class="bd-example col-12">
+                        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                {% block carouselItems %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="surcouche">
+                        <p>Rejoignez-nous !</p>
+                        <a href="" class="btn btn-success" role="button">Inscription</a>
+                        <a href="" class="btn btn-primary"  role="button">Connexion</a>
+                    </div>
+
+                {% endblock %}
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
